@@ -9,10 +9,11 @@
  *
  * See more details here: https://strapi.io/documentation/3.0.0-beta.x/concepts/configurations.html#bootstrap
  */
-
-require('dotenv').config({
-  silent: true,
-  path: require('find-config')('.env')
-})
+if (process.env.NODE_ENV !== 'staging') {
+  require('dotenv').config({
+    silent: true,
+    path: require('find-config')('.env')
+  })
+}
 
 module.exports = () => {};
