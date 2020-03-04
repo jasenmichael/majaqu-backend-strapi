@@ -12,7 +12,10 @@
         "password": "${process.env.DATABASE_PASSWORD}",
         "ssl": true
       },
-      "options": {}
+      "options": {
+        "rejectUnauthorized": false,
+        "ssl": true
+      }
     }
   }
 }
