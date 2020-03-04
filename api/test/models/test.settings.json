@@ -1,0 +1,22 @@
+{
+  "info": {
+    "name": "test"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "json": {
+      "type": "json"
+    }
+  },
+  "connection": "default",
+  "collectionName": "tests"
+}
