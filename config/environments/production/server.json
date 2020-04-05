@@ -1,7 +1,6 @@
 {
-  "host": "${process.env.BASE_URL}",
-  "port": "${process.env.PORT || 1337}",
-  "production": true,
+  "host": "localhost",
+  "port": 1337,
   "proxy": {
     "enabled": false
   },
