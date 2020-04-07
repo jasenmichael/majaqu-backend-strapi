@@ -1,6 +1,5 @@
 {
-  "routes": [
-    {
+  "routes": [{
       "method": "GET",
       "path": "/nas-status",
       "handler": "nas-status.find",

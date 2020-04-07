@@ -5,4 +5,16 @@
  * to customize this controller
  */
 
-module.exports = {};
+const moment = require('moment')
+
+module.exports = {
+  find: async ctx => {
+    let data = await strapi.query('nas-status').find().then(data => data[0])
+    let now = moment(new Date())
+    let next = moment(data.status.next_update)
+    // data.NEXT = next
+    // data.NOW = now
+    data.status.online = (now <= next)
+    ctx.send(data)
+  }
+}
